@@ -1,0 +1,16 @@
+module.exports = (pageObjects, value) => {
+  pageObjects.setValue('@yearBuild', value.yearBuildValue)
+  pageObjects.click('@foundationType')
+  pageObjects.click('@constractionType')
+  pageObjects.click('@numbOfStories')
+  pageObjects.click('@heatType')
+  pageObjects.click('@roofMaterial')
+  pageObjects.setValue('@roofImpYear', value.roofY)
+  pageObjects.setValue('@sqrFootage', value.sqrF)
+  pageObjects.setValue('@replcmtCost', value.replcmtAmount)
+  pageObjects.click('@floodZone')
+  pageObjects.click('@fireHyrdrnt')
+  pageObjects.click('@fireStation')
+  pageObjects.click('@submit')
+  pageObjects.waitForElementVisible('@firstName', 1000)
+}
