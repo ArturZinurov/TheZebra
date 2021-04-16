@@ -1,7 +1,9 @@
-module.exports = (homeInsPageObjects, value) => {
-  homeInsPageObjects.click('@residenceType')
-  homeInsPageObjects.setValue('@adress', value.addressValue)
-  homeInsPageObjects.click('@homePurchaseStatus')
-  homeInsPageObjects.click('@submit')
-  homeInsPageObjects.waitForElementVisible('@yearBuild', 1000)
+module.exports = (pageObjects, value) => {
+  pageObjects.click('@residenceType'),
+  pageObjects.setValue('@adress', value.addressValue),
+  pageObjects.setValue('@unit', value.unitValue),
+  pageObjects.click('@address1'),
+  pageObjects.click('@homePurchaseStatus'),
+  pageObjects.click('@submit'),
+  pageObjects.waitForElementVisible('@yearBuild', 10000000)
 }

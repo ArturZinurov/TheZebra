@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites errors="1"
-            failures="0"
+<testsuites errors="0"
+            failures="1"
             tests="2">
 
   <testsuite name="test"
-    errors="1" failures="0" hostname="" id="" package="test" skipped="0"
-    tests="2" time="20.71" timestamp="">
+    errors="0" failures="1" hostname="" id="" package="test" skipped="0"
+    tests="2" time="28.94" timestamp="">
   
-    <testcase name="Verify expected Objects are present on the home page" classname="test" time="20.67" assertions="5">
+    <testcase name="Verify expected Objects are present on the home page" classname="test" time="9.659" assertions="6">
+
+    
 
     
 
@@ -20,32 +22,17 @@
     
     </testcase>
   
-    <testcase name="Get a quote for a Home Ins" classname="test" time="0.04200" assertions="0">
-    <error message="insHomePage.setTheStartPageFunc is not a function" type="error"><![CDATA[
-    TypeError: insHomePage.setTheStartPageFunc is not a function
-    at Object.Get a quote for a Home Ins (C:\Git\Python_Projects\TheZebra\theZebra\zebraTests\test.js:28:19)
-    at Context.call (C:\Git\Python_Projects\TheZebra\theZebra\node_modules\nightwatch\lib\testsuite\context.js:375:35)
-    at TestCase.run (C:\Git\Python_Projects\TheZebra\theZebra\node_modules\nightwatch\lib\testsuite\testcase.js:53:31)
-    at Runnable.__runFn (C:\Git\Python_Projects\TheZebra\theZebra\node_modules\nightwatch\lib\testsuite\index.js:376:80)
-    at Runnable.run (C:\Git\Python_Projects\TheZebra\theZebra\node_modules\nightwatch\lib\testsuite\runnable.js:123:21)
-    at TestSuite.createRunnable (C:\Git\Python_Projects\TheZebra\theZebra\node_modules\nightwatch\lib\testsuite\index.js:443:33)
-    at TestSuite.handleRunnable (C:\Git\Python_Projects\TheZebra\theZebra\node_modules\nightwatch\lib\testsuite\index.js:448:18)
-    at C:\Git\Python_Projects\TheZebra\theZebra\node_modules\nightwatch\lib\testsuite\index.js:376:21
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    at async DefaultRunner.runTestSuite (C:\Git\Python_Projects\TheZebra\theZebra\node_modules\nightwatch\lib\runner\test-runners\default.js:68:7)
-    ]]></error>
+    <testcase name="Get a quote for a Home Ins" classname="test" time="19.28" assertions="2">
+
+      <failure message="Timed out while waiting for element &lt;//input[@id=&#34;first_name-input&#34;]&gt; to be present for 10000 milliseconds. - expected &#34;visible&#34; but got: &#34;not found&#34; (10338ms)">    at module.exports (C:\Git\Python_Projects\TheZebra\theZebra\zebraTestFunc\setTheHomePageFunc.js:28:15)
+    at C:\Git\Python_Projects\TheZebra\theZebra\zebraTests\test.js:33:5
+    at Array.forEach (&lt;anonymous&gt;)
+    at Object.Get a quote for a Home Ins (C:\Git\Python_Projects\TheZebra\theZebra\zebraTests\test.js:32:31)</failure>
+<system-out>[[ATTACHMENT|C:\Git\Python_Projects\TheZebra\theZebra\screens\test\Get-a-quote-for-a-Home-Ins_FAILED_Apr-15-2021-195830-GMT-0500.png]]</system-out>
     
     </testcase>
   
 
-  
-    <system-err>
-        TypeError: insHomePage.setTheStartPageFunc is not a function
-   - writing an ES6 async test case? - keep in mind that commands return a Promise; 
-   - writing unit tests? - make sure to specify &#34;unit_tests_mode=true&#34; in your config.
-       at Object.Get a quote for a Home Ins (C:\Git\Python_Projects\TheZebra\theZebra\zebraTests\test.js:28:19)
-       at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    </system-err>
   
 
     

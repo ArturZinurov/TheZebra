@@ -1,12 +1,14 @@
 module.exports = {
   startQuestions: [{
-    addressValue: '1801 E 6th St',
+    addressValue: '1801 East 6th Street',
+    unitValue: '200',
+    zipCodeValue: '78702'
   }],
   homesQuestoins: [{
     yearBuildValue: '2020',
     roofY: '2020',
     sqrF: '200000',
-    replcmtCost: '50000'
+    replcmtCost: '50,000'
   }],
   ownerQuestions: [{
     firstNameValue: 'Artur',

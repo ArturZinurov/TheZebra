@@ -1,6 +1,6 @@
 var homePage = {}
 var insHomePage = {}
-var homeTestData = require('../zebraTestfunc/homeTestData')
+var homeTestData = require('../zebraTestFunc/homeTestData')
 var setTheStartPageFunc = require('../zebraTestFunc/setTheStartPageFunc')
 var setTheHomePageFunc = require('../zebraTestFunc/setTheHomePageFunc')
 var setTheOwnerPageFunc = require('../zebraTestFunc/setTheOwnerPageFunc')
@@ -22,9 +22,15 @@ module.exports = {
     homePage.waitForElementVisible('@honeInsurance', 10000),
     homePage.setValue('@zipCode', 78702 ),
     homePage.click('@honeInsurance'),
-    homePage.click('@buttonGetQuotes')
+    homePage.click('@buttonGetQuotes'),
+    insHomePage.expect.url().to.endWith('/start/')
   },
   'Get a quote for a Home Ins': () => {
-      insHomePage.setTheStartPageFunc(insHomePage, homeTestData)
+  homeTestData.startQuestions.forEach(test => {
+       setTheStartPageFunc(insHomePage, test)
+     }),
+  homeTestData.homesQuestoins.forEach(test => {
+    setTheHomePageFunc(insHomePage, test)
+  })
   }
 }
